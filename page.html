@@ -3,35 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Gourmet Spot</title>
-    <link rel="stylesheet" href="style.css">
+    <title>RegExp Validation</title>
+    <style>
+        .error {
+            border: 1px solid red;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.8em;
+        }
+        .success-message {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>The Gourmet Spot</h1>
-    </header>
+    <h1>Form Validation</h1>
+    <form id="myForm">
+        <div>
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="fullName" name="fullName"><br>
+            <span id="fullNameError" class="error-message"></span>
+        </div>
+        <div>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <span id="emailError" class="error-message"></span>
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"><br>
+            <span id="phoneError" class="error-message"></span>
+        </div>
+        <div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <span id="passwordError" class="error-message"></span>
+        </div>
+        <br>
+        <button type="button" onclick="validateForm()">Submit</button>
+        <p id="successMessage" class="success-message"></p>
+    </form>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section>
-            <h2>Welcome to The Gourmet Spot</h2>
-            <p>Experience culinary delight at The Gourmet Spot, where we blend exquisite flavors with a warm and inviting atmosphere. We serve diffrent types of coffees and tea and also very delicious meals.Our menu features a curated selection of modern cuisine, crafted with fresh, locally sourced ingredients.  We specialize in creating memorable dining experiences, whether it's a romantic dinner, a family gathering, or a casual lunch with friends.</p>
-            <img src="pics.jpg" alt="Emmanuel Rukundo"> </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Emmanuel Rukundo<br>
-           Work number Number: 668587<br>
-           Email: emmaruel@gmail.com
-        </p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
